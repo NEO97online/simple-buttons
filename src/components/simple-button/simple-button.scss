@@ -18,6 +18,7 @@ button {
 
 .basic {
   background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
   &:hover {
     background-color: #dfdfdf;
   }
@@ -52,11 +53,19 @@ button {
     background-color: var(--app-danger-color, $default-danger-color);
     color: var(--app-danger-text-color, #ffffff);
   }
+
+  .ripple {
+    background: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .outline {
   background-color: transparent;
   border: 1px solid;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: #e0e0e0;
+  }
   &.primary {
     border-color: var(--app-primary-color, $default-primary-color);
     color: var(--app-primary-color, $default-primary-color);
@@ -73,7 +82,7 @@ button {
 
 .ripple {
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.2);
   transform: scale(0);
   position: absolute;
   opacity: 1;
