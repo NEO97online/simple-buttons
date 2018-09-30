@@ -1,4 +1,4 @@
-import { ButtonComponent } from './app-button';
+import { ButtonComponent } from './simple-button';
 
 describe('my-component', () => {
   it('builds', () => {

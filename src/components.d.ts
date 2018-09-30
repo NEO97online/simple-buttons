@@ -12,11 +12,11 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface AppButton {
+  interface SimpleButton {
     'color': 'plain' | 'primary' | 'secondary' | 'danger';
     'type': 'basic' | 'raised' | 'outline' | 'flat';
   }
-  interface AppButtonAttributes extends StencilHTMLAttributes {
+  interface SimpleButtonAttributes extends StencilHTMLAttributes {
     'color'?: 'plain' | 'primary' | 'secondary' | 'danger';
     'type'?: 'basic' | 'raised' | 'outline' | 'flat';
   }
@@ -24,26 +24,26 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'AppButton': Components.AppButton;
+    'SimpleButton': Components.SimpleButton;
   }
 
   interface StencilIntrinsicElements {
-    'app-button': Components.AppButtonAttributes;
+    'simple-button': Components.SimpleButtonAttributes;
   }
 
 
-  interface HTMLAppButtonElement extends Components.AppButton, HTMLStencilElement {}
-  var HTMLAppButtonElement: {
-    prototype: HTMLAppButtonElement;
-    new (): HTMLAppButtonElement;
+  interface HTMLSimpleButtonElement extends Components.SimpleButton, HTMLStencilElement {}
+  var HTMLSimpleButtonElement: {
+    prototype: HTMLSimpleButtonElement;
+    new (): HTMLSimpleButtonElement;
   };
 
   interface HTMLElementTagNameMap {
-    'app-button': HTMLAppButtonElement
+    'simple-button': HTMLSimpleButtonElement
   }
 
   interface ElementTagNameMap {
-    'app-button': HTMLAppButtonElement;
+    'simple-button': HTMLSimpleButtonElement;
   }
 
 

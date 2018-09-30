@@ -2,21 +2,8 @@ $default-primary-color: #448aff;
 $default-secondary-color: #ffb944;
 $default-danger-color: #f54e71;
 
-@function set-font-color($background-color, $default-font-color) {
-  $font-color: $default-font-color;
-
-  @if lightness($background-color) > 50% {
-      $font-color: invert($default-font-color);
-  }
-
-  @return $font-color;
-}
-
-@function sfc($background-color, $default-font-color) {
-  @return set-font-color($background-color, $default-font-color);
-}
-
 button {
+  display: inline-block;
   border: none;
   cursor: pointer;
   border-radius: 2px;
@@ -26,6 +13,9 @@ button {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
 .basic {
@@ -80,5 +70,21 @@ button {
   &.danger {
     border-color: var(--app-danger-color, $default-danger-color);
     color: var(--app-danger-color, $default-danger-color);
+  }
+}
+
+.ripple {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+  animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
