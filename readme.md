@@ -8,6 +8,14 @@ This is a simple web-component button built with Stencil.
 
 ![Demo](demo.gif)
 
+## Installation
+
+```
+npm i simple-buttons
+```
+
+After installing into your project, consult the [Stencil docs](https://stenciljs.com/docs/overview) for guides on how to use web components with your framework of choice.
+
 ## Usage
 
 ```html
