@@ -2,7 +2,11 @@
 
 # Simple Buttons
 
-This is a simple web-component button built with Stencil. [View demo](https://simple-buttons.surge.sh/)
+This is a simple web-component button built with Stencil. 
+
+[View demo](https://simple-buttons.surge.sh/)
+
+![Demo](demo.gif)
 
 ## Usage
 
