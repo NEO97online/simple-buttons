@@ -15,26 +15,23 @@ export class ButtonComponent {
   @Element() buttonEl: HTMLElement
 
   handleClick = (event) => {
-    const buttonX = this.buttonEl.offsetLeft
-    const buttonY = this.buttonEl.offsetTop
-    let width = this.buttonEl.offsetWidth
-    let height = this.buttonEl.offsetHeight
+    let { offsetLeft, offsetTop, offsetWidth, offsetHeight } = this.buttonEl
 
-    // make the ripple round
-    if (width > height) {
-      height = width
+    let rippleSize
+    if (offsetWidth > offsetHeight) {
+      rippleSize = offsetWidth
     } else {
-      width = height
+      rippleSize = offsetHeight
     }
 
-    const x = event.pageX - buttonX - width / 2
-    const y = event.pageY - buttonY - height / 2
+    const rippleX = event.pageX - offsetLeft - rippleSize / 2
+    const rippleY = event.pageY - offsetTop - rippleSize / 2
 
     const rippleStyles = {
-      width: width + 'px',
-      height: height + 'px',
-      top: y + 'px',
-      left: x + 'px'
+      width: rippleSize + 'px',
+      height: rippleSize + 'px',
+      top: rippleY + 'px',
+      left: rippleX + 'px'
     }
 
     this.ripples = [...this.ripples, (<span class="ripple" style={rippleStyles} />)]
