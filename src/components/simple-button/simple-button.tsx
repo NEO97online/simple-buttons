@@ -42,7 +42,7 @@ export class ButtonComponent {
 
   render() {
     return (
-      <button class={`${this.type} ${this.color}`} onClick={this.handleClick}>
+      <button class={`${this.type} ${this.color}`} onMouseDown={this.handleClick}>
         {...this.ripples}
         <slot />
       </button>
