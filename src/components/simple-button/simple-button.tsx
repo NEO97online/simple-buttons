@@ -10,7 +10,7 @@ export class ButtonComponent {
   @Prop() type: 'basic' | 'raised' | 'outline' | 'flat' = 'basic'
   @Prop() color: 'plain' | 'primary' | 'secondary' | 'danger' = 'plain'
 
-  @State() ripples: any[] = []
+  @State() ripples: JSX.Element[] = []
 
   @Element() buttonEl: HTMLElement
 
