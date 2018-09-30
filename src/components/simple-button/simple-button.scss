@@ -3,7 +3,6 @@ $default-secondary-color: #ffb944;
 $default-danger-color: #f54e71;
 
 button {
-  display: inline-block;
   border: none;
   cursor: pointer;
   border-radius: 2px;
@@ -15,7 +14,6 @@ button {
   font-size: 14px;
   position: relative;
   overflow: hidden;
-  text-align: center;
 }
 
 .basic {
