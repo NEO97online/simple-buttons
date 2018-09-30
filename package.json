@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "simple-buttons",
+  "version": "1.0.0",
+  "description": "Simple web component buttons made with Stencil.",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
