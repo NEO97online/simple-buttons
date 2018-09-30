@@ -1,0 +1,84 @@
+$default-primary-color: #448aff;
+$default-secondary-color: #ffb944;
+$default-danger-color: #f54e71;
+
+@function set-font-color($background-color, $default-font-color) {
+  $font-color: $default-font-color;
+
+  @if lightness($background-color) > 50% {
+      $font-color: invert($default-font-color);
+  }
+
+  @return $font-color;
+}
+
+@function sfc($background-color, $default-font-color) {
+  @return set-font-color($background-color, $default-font-color);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 8px 8px;
+  width: 88px;
+  outline: 0;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.basic {
+  background-color: transparent;
+  &:hover {
+    background-color: #dfdfdf;
+  }
+  &.plain {
+    color: #1a1a1a;
+  }
+  &.primary {
+    color: var(--app-primary-color, $default-primary-color);
+  }
+  &.secondary {
+    color: var(--app-secondary-color, $default-secondary-color);
+  }
+  &.danger {
+    color: var(--app-danger-color, $default-danger-color);
+  }
+}
+
+.raised {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.raised, .flat {
+  &.primary {
+    background-color: var(--app-primary-color, $default-primary-color);
+    color: var(--app-primary-text-color, #ffffff);
+  }
+  &.secondary {
+    background-color: var(--app-secondary-color, $default-secondary-color);
+    color: var(--app-secondary-text-color, #1a1a1a);
+  }
+  &.danger {
+    background-color: var(--app-danger-color, $default-danger-color);
+    color: var(--app-danger-text-color, #ffffff);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid;
+  &.primary {
+    border-color: var(--app-primary-color, $default-primary-color);
+    color: var(--app-primary-color, $default-primary-color);
+  }
+  &.secondary {
+    border-color: var(--app-secondary-color, $default-secondary-color);
+    color: var(--app-secondary-color, $default-secondary-color);
+  }
+  &.danger {
+    border-color: var(--app-danger-color, $default-danger-color);
+    color: var(--app-danger-color, $default-danger-color);
+  }
+}
