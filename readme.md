@@ -2,10 +2,23 @@
 
 # Simple Buttons
 
-This is a simple web-component button built with Stencil.
+This is a simple web-component button built with Stencil. [View demo](https://simple-buttons.surge.sh/)
 
 ## Usage
 
 ```html
 <simple-button type="raised" color="primary">Click me</simple-button>
 ```
+
+Type: basic, raised, outline, flat (default: basic)
+
+Color: plain, primary, secondary, danger (default: plain)
+
+
+To customize colors, define the following CSS variables in your application:
+- --app-primary-color
+- --app-secondary-color
+- --app-danger-color
+- --app-primary-text-color
+- --app-secondary-text-color
+- --app-danger-text-color
