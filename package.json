@@ -1,6 +1,6 @@
 {
   "name": "simple-buttons",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple web component buttons made with Stencil.",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
